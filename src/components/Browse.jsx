@@ -31,9 +31,10 @@ const moodToKeyword = {
   '🤩curious': "science",
   '😘romantic': "love",
  ' 😰anxious': "mindfulness",
+ 'none':''
 };
 const moods= Object.keys(moodToKeyword);
-    const queryWithMood = `${query|| 'happy'} ${moodToKeyword[mood] || mood}`;
+    const queryWithMood = `${query||'search'} ${moodToKeyword[mood] || ''}`;
 
 
 
@@ -43,7 +44,7 @@ const moods= Object.keys(moodToKeyword);
     const url=`https://www.googleapis.com/books/v1/volumes?q=${queryWithMood}&maxResults=40&key= ${import.meta.env.VITE_API_KEY}`;
     useEffect(() =>{
         book();
-    },[mood, query]);
+    },[mood]);
 
     const book =async() =>{
       setLoading(true);
