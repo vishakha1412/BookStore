@@ -141,7 +141,7 @@ const moods= Object.keys(moodToKeyword);
        <div className='space-x-2 bg-linear-65 from-green-300 to-yellow-300 rounded-xl   p-2  transition-all duration-150 mx-5 w-fit'>Favourites Book : {bookid.length}
        <button className=' bg-linear-65 from-purple-300 to-red-300 rounded-xl hover:scale-105 p-3 transition-all duration-150 mx-5' onClick={() =>navigate('/favourites')}>   Explore</button></div>
 {!loading ? 
-   <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 p-6   min-h-screen   bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-200'> 
+   <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4   bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-200'> 
     
         {books.items && books.items.map((item) => (
            
