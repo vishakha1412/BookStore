@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { FaRegStar } from "react-icons/fa";
 import { addFavourite, removeFavourite } from '../../features/Favourites';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { EmptyFavourite } from './EmptyFavourite';
 
 
 const Favourites = () => {
@@ -64,7 +65,7 @@ const Favourites = () => {
 useEffect(() => { fetchBooks()}, []);
 
   //if (loading) return <div>Loading favourites...</div>;
-  if (favouriteIds.length === 0) return <div>{favouriteIds.length}No favourite books found.</div>;
+  if (favouriteIds.length === 0) return <div><EmptyFavourite/></div>;
 
   return (
     <div className='min-h-screen bg-gradient-to-br  from-yellow-100 via-pink-100 to-purple-200'>
