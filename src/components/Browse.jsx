@@ -56,7 +56,7 @@ const moodToKeyword = {
   '😘romantic': "love",
  ' 😰anxious': "mindfulness",
  'none':'',
- 'favourites':'6_w6AQAAMAAJ',
+ 
 };
 const moods= Object.keys(moodToKeyword);
     const queryWithMood = `${query||'search'} ${moodToKeyword[mood] || ''}`;
